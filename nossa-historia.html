@@ -8,23 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* AQUI ESTÃO AS MUDANÇAS NO CSS PARA GARANTIR A ROLAGEM */
-        html, body {
-            height: 100%; /* Garante que HTML e Body ocupem 100% da altura da viewport */
-            margin: 0; /* Remove margens padrão do body */
-            padding: 0; /* Remove preenchimento padrão do body */
-            overflow-x: hidden; /* Continua evitando rolagem horizontal */
+        html {
+            height: 100%; /* Garante que o HTML ocupe 100% da altura da viewport */
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            overflow-y: auto; /* PERMITE A ROLAGEM VERTICAL QUANDO O CONTEÚDO EXCEDER A ALTURA */
-            display: flex; /* Mantém o flex para centralizar o conteúdo principal */
-            flex-direction: column; /* Organiza os itens em coluna */
-            align-items: center; /* Centraliza horizontalmente o conteúdo principal */
+            margin: 0; /* Remove margens padrão do body */
             padding: 1.5rem; /* Adiciona um padding geral para não colar nas bordas */
+            overflow-x: hidden; /* Continua evitando rolagem horizontal */
+            overflow-y: auto; /* PERMITE A ROLAGEM VERTICAL QUANDO O CONTEÚDO EXCEDER A ALTURA */
+            /* REMOVIDO: display: flex; flex-direction: column; align-items: center; */
+            /* O conteúdo principal será centralizado com 'mx-auto' e 'max-w-lg' */
         }
 
-        /* Estilo para o fundo com corações (copiado do index.html para consistência) */
+        /* Estilo para o fundo com corações */
         .heart-background {
             background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
             position: fixed; /* Fixa o fundo para que os corações não rolem com o conteúdo */
@@ -58,7 +56,7 @@
             top: -50%;
         }
 
-        /* Variações de tamanho e posição dos corações (copiado do index.html) */
+        /* Variações de tamanho e posição dos corações */
         .heart:nth-child(1) { width: 40px; height: 40px; left: 10%; top: 20%; animation-delay: 0s; }
         .heart:nth-child(2) { width: 60px; height: 60px; left: 80%; top: 5%; animation-delay: 2s; background-color: rgba(255, 200, 220, 0.4); }
         .heart:nth-child(3) { width: 30px; height: 30px; left: 30%; top: 70%; animation-delay: 4s; }
@@ -84,7 +82,7 @@
             text-shadow: 2px 2px 5px rgba(255, 0, 100, 0.5);
         }
 
-        /* Efeito de brilho no botão (copiado do index.html) */
+        /* Efeito de brilho no botão */
         .shiny-button {
             position: relative;
             overflow: hidden;
@@ -117,7 +115,7 @@
         <div class="heart"></div>
     </div>
 
-    <div class="relative z-10 bg-pink-200 bg-opacity-80 rounded-3xl shadow-2xl p-6 md:p-10 max-w-lg w-full text-center border-4 border-pink-400 transform transition-all duration-500 hover:scale-105 my-8">
+    <div class="relative z-10 bg-pink-200 bg-opacity-80 rounded-3xl shadow-2xl p-6 md:p-10 max-w-lg w-full text-center border-4 border-pink-400 transform transition-all duration-500 hover:scale-105 mx-auto my-8">
         <h1 class="page-title text-5xl md:text-6xl font-extrabold text-red-600 mb-8">
             Nossa História em Dias! 💖
         </h1>
